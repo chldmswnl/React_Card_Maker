@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.module.css";
 import App from "./app";
-import Login from "./components/login/login";
+import AuthService from "./service/auth_service";
+
+const authService = new AuthService();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <App authService={authService} />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,0 +1,30 @@
+@value makerGreen from '../../common/colors.css';
+
+.headerName {
+  font-weight: bold;
+  padding: 1rem 0;
+  color: white;
+}
+
+.header {
+  background-color: makerGreen;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  position: relative;
+}
+
+.logout {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  padding: 0.8em;
+  border-radius: 10px;
+  font-size: 0.5em;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+}

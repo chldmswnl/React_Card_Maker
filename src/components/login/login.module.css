@@ -2,37 +2,30 @@
   width: 20rem;
   height: 20rem;
   text-align: center;
+  background-color: white;
 }
-.header {
-  background-color: bisque;
-}
-.headerName {
-  padding: 1rem 0;
-  margin: 0;
-  font-weight: bold;
-}
-.footer {
-  background-color: bisque;
-}
-.footerName {
-  padding: 1rem 0;
-  margin: 0;
-  font-weight: bold;
-  font-size: 0.5rem;
-}
+
 .loginSection {
   display: flex;
   flex-direction: column;
 }
-.sectionName {
-  margin: 1rem 0;
-  font-weight: bold;
-  font-size: 1.3em;
+
+.loginList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list {
+  margin-bottom: 1rem;
 }
 .sectionBtn {
-  margin-bottom: 1rem;
+  width: 100%;
   padding: 0.5rem 0;
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
+}
+
+.sectionBtn:hover {
+  background-color: bisque;
 }
