@@ -3,6 +3,7 @@
 .footer {
   background-color: makerGreen;
   width: 100%;
+  text-align: center;
 }
 .footerName {
   font-weight: bold;

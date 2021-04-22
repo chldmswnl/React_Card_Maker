@@ -3,15 +3,19 @@ import Footer from "../footer/footer";
 import Header from "../header/header";
 import styles from "./login.module.css";
 
-const Login = ({ authService }) => {
+const Login = ({ authService, onLogout }) => {
   const onLogin = (event) => {
     authService //
       .login(event.currentTarget.textContent)
-      .then(console.log);
+      .then((obj) => {
+        if (obj.user) {
+          window.location.href = "/maker";
+        }
+      });
   };
   return (
     <section className={styles.login}>
-      <Header />
+      <Header onLogout={onLogout} />
       <section className={styles.loginSection}>
         <h1 className={styles.sectionName}>Login</h1>
         <ol className={styles.loginList}>
