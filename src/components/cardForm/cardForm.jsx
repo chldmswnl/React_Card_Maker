@@ -1,57 +1,70 @@
 import React from "react";
 import styles from "./cardForm.module.css";
+import Button from "../button/button";
+import ImageFileInput from "../iamge_file_input/image_file_input";
 
 const CardForm = ({ card }) => {
-  return (
-    <form action="" className={styles.cardForm}>
-      <div className={styles.row}>
-        <input
-          type="text"
-          placeholder="Name"
-          className={styles.firstRow}
-          value={card.name}
-        />
+  const {
+    name,
+    company,
+    title,
+    email,
+    message,
+    theme,
+    fileName,
+    fileURL,
+  } = card;
 
-        <input
-          type="text"
-          placeholder="Company"
-          className={styles.firstRow}
-          value={card.company}
-        />
-        <select name="colors" id="color" className={styles.firstRow}>
-          <option value="">Light</option>
-          <option value="colorful">Colorful</option>
-          <option value="Dark">Dark</option>
-        </select>
+  const onSubmit = () => {};
+  return (
+    <form className={styles.cardForm}>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        className={styles.input}
+        value={name}
+      />
+
+      <input
+        type="text"
+        name="company"
+        placeholder="Company"
+        className={styles.input}
+        value={company}
+      />
+      <select name="theme" value={theme} className={styles.select}>
+        <option value="light">Light</option>
+        <option value="colorful">Colorful</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        className={styles.input}
+        value={title}
+      />
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        className={styles.input}
+        value={email}
+      />
+
+      <textarea
+        name="message"
+        placeholder="message"
+        className={styles.textarea}
+        value={message}
+      />
+
+      <div className={styles.fileInput}>
+        <ImageFileInput />
       </div>
-      <div className={styles.row}>
-        <input
-          type="text"
-          placeholder="Title"
-          className={styles.secondRow}
-          value={card.title}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          className={styles.secondRow}
-          value={card.email}
-        />
-      </div>
-      <div className={styles.row}>
-        <textarea
-          name="message"
-          id="message"
-          rows="2"
-          placeholder="message"
-          className={styles.textArea}
-          value={card.message}
-        ></textarea>
-      </div>
-      <div className={styles.row}>
-        <button className={styles.formBtn}>No file</button>
-        <button className={styles.formBtn}>Add</button>
-      </div>
+      <Button name="Delete" onClick={onSubmit} />
     </form>
   );
 };
